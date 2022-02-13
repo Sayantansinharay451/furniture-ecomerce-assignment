@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-container {
+	margin: 24px 0;
+	padding-left: 24px;
+	display: flex;
+	flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel {
+	height: 100%;
+	display: flex;
+	/* overflow: hidden; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.carousel-items:first-child {
+	margin-left: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-items {
+	height: 167px;
+	margin-left: 24px;
+	border-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dot-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 24px;
+}
+
+.active-dot {
+	cursor: pointer;
+	background: #171b24;
+	height: 8px;
+	width: 18px;
+	display: inline-block;
+	transition: all 0.6s ease;
+	border-radius: 8px;
+	margin: 0 4px;
+}
+
+.dot {
+	cursor: pointer;
+	height: 8px;
+	width: 8px;
+	margin: 0 2px;
+	background: rgba(23, 27, 36, 0.2);
+	display: inline-block;
+	transition: all 0.6s ease;
+	border-radius: 50%;
+	margin: 0 4px;
+}
+
+.main-content {
+	padding: 0 24px;
+	height: 100%;
+	overflow: auto;
+}
+
+h1 {
+	size: 28px;
+	letter-spacing: -0.04em;
+	color: #171b24;
+	position: relative;
+	display: block;
+	margin: 0;
+}
+
+.furniture {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -72px;
+}
+
+.furniture:nth-child(even) {
+	margin-top: -100px;
+}
+
+.furniture-container {
+	gap: 24px;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.furniture-items {
+	position: relative;
+	width: 100%;
+	height: 175px;
+	background: #f4f4f8;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.furniture-photo {
+	position: relative;
+	top: 72px;
+	z-index: 1;
+}
+
+.furniture-title {
+	margin: 0;
+	margin-top: 100px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #414044;
+}
+
+.furniture-price {
+	margin: 5px 0 5px 0;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: -0.05em;
+	color: #f7c390;
+}
+
+.menu {
+	height: 100px;
+	background-color: white;
+	width: 100%;
+	box-shadow: 0px -4px 25px rgba(0, 0, 0, 0.04);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.menu-items {
+	width: 21px;
+	height: auto;
 }
